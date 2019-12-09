@@ -1,0 +1,18 @@
+import random
+
+lista = []
+
+for i in range(10):   
+    lista.append(random.randint(1, 100))
+
+print(lista)
+
+def Bubble(x):
+    for i in range(len(x)-1,0,-1):
+        for j in range(i):
+            if x[j]>x[j+1]:
+                print(x[j],x[j+1])
+                x[j], x[j+1] = x[j+1], x[j]
+                
+Bubble(lista)
+print(lista)
